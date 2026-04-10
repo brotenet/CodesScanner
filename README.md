@@ -1,6 +1,6 @@
 # CodesScanner
 
-[![Download](https://img.shields.io/badge/Download-latest-blue)](https://github.com/brotenet/PenTabletMapper/releases)
+[![Download](https://img.shields.io/badge/Download-latest-blue)](https://github.com/brotenet/CodesScanner/releases)
 
 Linux tool for QR / Barcode scanning and generation.
 - This application requires Java v.25.0.2 (or later version) to be installed on the system.
