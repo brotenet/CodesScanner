@@ -1,5 +1,5 @@
 #!/bin/bash
-APP_VERSION="0.0.1"
+APP_VERSION="0.0.2"
 APP_NAME="CodesScanner" #NO SPACES
 APP_COMMENT="QR / Barcode scanner and generator"
 APP_CATEGORY="Office;" # SEPARATE AND END USING SEMICOLON ';'
