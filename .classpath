@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-25">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/gst1-java-core-1.4.0.jar"/>
+	<classpathentry kind="lib" path="lib/gst1-java-fx-0.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/jna-5.18.1.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-base-25.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-base-25-linux.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-controls-25.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-controls-25-linux.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-fxml-25.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-fxml-25-linux.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-graphics-25.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-graphics-25-linux.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-media-25.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-media-25-linux.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-swing-25.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-swing-25-linux.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-web-25.jar"/>
+	<classpathentry kind="lib" path="lib/javafx-web-25-linux.jar"/>
+	<classpathentry kind="lib" path="lib/jdk-jsobject-25.jar"/>
+	<classpathentry kind="lib" path="lib/jdk-jsobject-25-linux.jar"/>
+	<classpathentry kind="lib" path="lib/webcam-capture-0.3.12.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/bridj-0.7.0.jar"/>
+	<classpathentry kind="lib" path="lib/core-3.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/javase-3.5.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

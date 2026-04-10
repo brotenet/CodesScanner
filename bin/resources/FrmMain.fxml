@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bpRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.FrmMain">
+   <center>
+      <TabPane fx:id="tabsMain" tabMaxHeight="32.0" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Scan with WebCam">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                           <children>
+                              <ImageView fx:id="ivWebCamView" fitHeight="480.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextArea fx:id="txtWebCamOutput" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 20;" HBox.hgrow="ALWAYS">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </TextArea>
+                              <VBox fx:id="cntWebCamScanCodeActions">
+                                 <children>
+                                    <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label maxWidth="1.7976931348623157E308" text="Selected WebCam">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@img/webcam.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Label>
+                                          <ChoiceBox fx:id="cbAvailableWebCams" maxWidth="1.7976931348623157E308" prefWidth="150.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="cntWebCamScanCodeActions" disable="true" maxWidth="1.7976931348623157E308">
+                                       <children>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendWebCamToClipBoard" text="Copy to Clipboard">
+                                             <tooltip>
+                                                <Tooltip text="Copy value to clipboard" />
+                                             </tooltip>
+                                             <padding>
+                                                <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendWebCamToCodeGeneration" text="Send to Generation" VBox.vgrow="ALWAYS">
+                                             <padding>
+                                                <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                             </padding>
+                                             <tooltip>
+                                                <Tooltip text="Send value to code generation" />
+                                             </tooltip>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/webcam.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Scan Image File">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                           <children>
+                              <ImageView fx:id="ivImageView" fitHeight="480.0" fitWidth="640.0" onMouseReleased="#openImageFileLoader" pickOnBounds="true" preserveRatio="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <image>
+                                    <Image url="@img/load_image.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextArea fx:id="txtImageFileOutput" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 20;" HBox.hgrow="ALWAYS">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </TextArea>
+                              <VBox fx:id="cntImageScanCodeActions" disable="true">
+                                 <children>
+                                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendImageToClipBoard" text="Copy to Clipboard">
+                                       <tooltip>
+                                          <Tooltip text="Copy value to clipboard" />
+                                       </tooltip>
+                                       <padding>
+                                          <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendImageToCodeGeneration" text="Send to Generation">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                       <tooltip>
+                                          <Tooltip text="Send value to code generation" />
+                                       </tooltip>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/image_file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Generate QR/Barcodes">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="445.0" prefWidth="465.0">
+                           <children>
+                              <ImageView fx:id="ivCodeGenerationView" fitHeight="480.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <image>
+                                    <Image url="@img/generate_code.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextArea fx:id="txtGenerationContent" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </TextArea>
+                              <VBox>
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" text="Code Format">
+                                       <graphic>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/webcam.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                    <ChoiceBox fx:id="cbCodeFormats" maxWidth="1.7976931348623157E308" />
+                                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#generateCode" text="Generate Code">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnSaveToImage" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#saveGeneratedCode" text="Save to Image">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/generate.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

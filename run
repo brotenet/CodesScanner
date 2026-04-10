@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BASE_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )";
+
+cd "$BASE_DIR";
+
+echo "BASE DIR: " $BASE_DIR;
+
+java --module-path lib --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web -cp "lib/*" application.Main
+
